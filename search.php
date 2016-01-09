@@ -12,61 +12,67 @@ class Connect extends PDO
         $this->user = 'root';
         $this->pass = '';
         $this->host = 'localhost';
-        $this->dbname = 'image';
+        $this->dbname = 'searcht';
 
         parent::__construct("mysql:host=$this->host;dbname=$this->dbname", $this->user, $this->pass);
     }
 }
 
 
-class Write
+class Write extends Connect
 {
     public $dbn;
 
-    public function getAll()
+    public static function getAll()
     {
         $dbn = new Connect;
         $data = array();
 
-        $stmt = $dbn->prepare('SELECT * FROM tattoo');
-        $stmt->execute();
-        foreach ($stmt as $row)
-        {
-            $data[$row['id']]['img'] = $row['img'];
+        $stmt = $dbn->prepare("SELECT ws.assocId FROM word wo JOIN assoc ws ON (wo.id = ws.wordId) WHERE word LIKE ?");
+        $stmt->execute([$_POST['word']]);
+
+        $i = 0;
+
+        foreach($stmt as $row) {
+            $data[$i++] = $row['assocId'];
         }
-        return $data;
+
+        $ids = join(',',$data);
+
+        $stmtF = $dbn->prepare("SELECT ta.tattooId, COUNT(ta.tattooId) as count FROM tattoo_assoc ta WHERE ta.assocId IN ($ids) GROUP BY ta.tattooId");
+        $stmtF->execute();
+
+        $assoc = $stmtF->fetchAll();
+
+        foreach($assoc as $row) {
+            $arr[$row['tattooId']] = $row['count'];
+        }
+
+        $maxs = array_keys($arr, max($arr));
+
+        $stmtUser = $dbn->prepare("SELECT * FROM tattoo WHERE id = $maxs[0]");
+        $stmtUser->execute();
+
+        foreach($stmtUser as $row) {
+            $tattoo = array(
+                'name' => $row['name'],
+                'path' => $row['path']
+            );
+        }
+        
+        return $tattoo;
     }
 }
 
-//$write = new Write();
-//
-//$data = $write->getAll();
-//
-//echo json_encode($data);
-
-function monetdb_connect($lang = "sql", $host = "127.0.0.1", $port = 50000, $username = "monetdb", $password = "monetdb", $database = "demo", $hashfunc = "") {
-    $options["host"] = $host;
-    $options["port"] = $port;
-
-    $options["username"] = $username;
-    $options["password"] = $password;
-
-    $options["database"] = $database;
-    $options["persistent"] = FALSE;
-
-
-    if ($hashfunc == "") {
-        $hashfunc = "sha1";
-    }
-
-    if ($lang == "") {
-        $lang = "sql";
-    }
-
-    $options["hashfunc"] = $hashfunc;
-    $options["lang"]     = $lang;
-
-    return mapi_connect_proxy($options);
+if (isset($_POST['word'])) {
+    $data = Write::getAll();
+    echo json_encode($data);
 }
 
-print_r(monetdb_connect());
+//if (isset($_GET['word'])) {
+//    $data = Write::getAll();
+//    echo json_encode($data);
+//}
+
+
+

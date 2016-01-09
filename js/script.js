@@ -50,31 +50,15 @@ $(function() {
 });
 
 var myTest = {
-    get: function(){
+    get: function(word){
         $.ajax({
-            url:'search.php/Write/getAll',
-            type    : 'GET',
+            url:'search.php',
+            data    : 'word=' + word,
+            type    : 'post',
             dataType: 'json',
             success: function(json){
-                console.log('test');
                 console.log(json)
             }
         })
-    },
-    getF: function(){
-        console.log('test');
     }
 }
-
-
-function compire(a,b) {
-	if(a < b) {
-		var c = b - a;
-		console.log("yes" + "  " + c);
-	} else {
-		var c = a - b;
-		console.log("no" + "  " + c);
-	}
-}
-
-compire(0,022, 0,171);
