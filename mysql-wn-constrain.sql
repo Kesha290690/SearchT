@@ -9,7 +9,7 @@ ALTER TABLE morphmaps ADD CONSTRAINT pk_morphmaps PRIMARY KEY (morphid,pos,wordi
 ALTER TABLE postypes ADD CONSTRAINT pk_postypes PRIMARY KEY (pos);
 ALTER TABLE samples ADD CONSTRAINT pk_samples PRIMARY KEY (synsetid,sampleid);
 ALTER TABLE semlinks ADD CONSTRAINT pk_semlinks PRIMARY KEY (synset1id,synset2id,linkid);
-ALTER TABLE senses ADD CONSTRAINT pk_senses PRIMARY KEY (wordid,synsetid);
+ALTER TABLE senses ADD CONSTRAINT pk_senses PRIMARY KEY (wordid,synsetid); 
 ALTER TABLE synsets ADD CONSTRAINT pk_synsets PRIMARY KEY (synsetid);
 ALTER TABLE vframes ADD CONSTRAINT pk_vframes PRIMARY KEY (frameid);
 ALTER TABLE vframemaps ADD CONSTRAINT pk_vframemaps PRIMARY KEY (synsetid,wordid,frameid);

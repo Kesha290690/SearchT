@@ -18,7 +18,7 @@ class Connect extends PDO
     }
 
     protected static function connecting(){
-        $dbn = new Connect();
+        $dbn = new Connect(); 
         return $dbn;
     }
 
