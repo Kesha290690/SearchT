@@ -16,6 +16,12 @@ class Connect extends PDO
 
         parent::__construct("mysql:host=$this->host;dbname=$this->dbname", $this->user, $this->pass);
     }
+
+    protected static function connecting(){
+        $dbn = new Connect();
+        return $dbn;
+    }
+
 }
 
 
@@ -23,13 +29,15 @@ class Write extends Connect
 {
     public $dbn;
 
-    public static function getAll()
+    private static function getAssoc()
     {
-        $dbn = new Connect;
+
+        $dbn = parent::connecting();
+
         $data = array();
 
-        $stmt = $dbn->prepare("SELECT ws.assocId FROM word wo JOIN assoc ws ON (wo.id = ws.wordId) WHERE word LIKE ?");
-        $stmt->execute([$_POST['word']]);
+        $stmt = $dbn->prepare("SELECT ws.assocId FROM word wo JOIN assoc ws ON (wo.id = ws.wordId) WHERE word LIKE 'skull'");
+        $stmt->execute();
 
         $i = 0;
 
@@ -39,7 +47,16 @@ class Write extends Connect
 
         $ids = join(',',$data);
 
-        $stmtF = $dbn->prepare("SELECT ta.tattooId, COUNT(ta.tattooId) as count FROM tattoo_assoc ta WHERE ta.assocId IN ($ids) GROUP BY ta.tattooId");
+        return $ids;
+    }
+
+    private static function getTattoos()
+    {
+        $dbn = parent::connecting();
+
+        $firstQ = self::getAssoc();
+
+        $stmtF = $dbn->prepare("SELECT ta.tattooId, COUNT(ta.tattooId) as count FROM tattoo_assoc ta WHERE ta.assocId IN ($firstQ) GROUP BY ta.tattooId");
         $stmtF->execute();
 
         $assoc = $stmtF->fetchAll();
@@ -50,7 +67,16 @@ class Write extends Connect
 
         $maxs = array_keys($arr, max($arr));
 
-        $stmtUser = $dbn->prepare("SELECT * FROM tattoo WHERE id = $maxs[0]");
+        return $maxs;
+    }
+
+    public static function getTattoo(){
+
+        $dbn = parent::connecting();
+
+        $twoQ = self::getTattoos();
+
+        $stmtUser = $dbn->prepare("SELECT * FROM tattoo WHERE id = $twoQ[0]");
         $stmtUser->execute();
 
         foreach($stmtUser as $row) {
@@ -59,20 +85,21 @@ class Write extends Connect
                 'path' => $row['path']
             );
         }
-        
+
+        var_dump($tattoo);
+
         return $tattoo;
     }
 }
 
 if (isset($_POST['word'])) {
-    $data = Write::getAll();
+    $data = Write::getTattoo();
     echo json_encode($data);
 }
 
-//if (isset($_GET['word'])) {
-//    $data = Write::getAll();
-//    echo json_encode($data);
-//}
+Write::getTattoo();
+
+
 
 
 
