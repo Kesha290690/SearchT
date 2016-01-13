@@ -36,11 +36,11 @@ class Write extends Connect
 
         $data = array();
 
-//        $stmt = $dbn->prepare("SELECT ws.assocId FROM word wo JOIN assoc ws ON (wo.id = ws.wordId) WHERE word LIKE ?");
-//        $stmt->execute([$_POST['word']]);
+        $stmt = $dbn->prepare("SELECT ws.assocId FROM word wo JOIN assoc ws ON (wo.id = ws.wordId) WHERE word LIKE ?");
+        $stmt->execute([$_GET['word']]);
 
-        $stmt = $dbn->prepare("SELECT ws.assocId FROM word wo JOIN assoc ws ON (wo.id = ws.wordId) WHERE word LIKE 'skull'");
-        $stmt->execute();
+       // $stmt = $dbn->prepare("SELECT ws.assocId FROM word wo JOIN assoc ws ON (wo.id = ws.wordId) WHERE word LIKE 'skull'");
+       // $stmt->execute();
 
         $i = 0;
 
@@ -93,30 +93,16 @@ class Write extends Connect
     }
 }
 
-//if (isset($_POST['word'])) {
-//    $data = Write::getTattoo();
-//    echo json_encode($data);
-//}
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['word'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    if (isset($_GET['word'])) {
         $data = Write::getTattoo();
-        echo json_encode("yesyesyes");
+        echo json_encode($data);
     } else {
         echo json_encode("nonononon");
     }
 
 }
-
-//if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-//    $data = Write::getTattoo();
-//    echo json_encode($data);
-//}
-
-
-
-$data = Write::getTattoo();
-    echo json_encode($data);
 
 
 
