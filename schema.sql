@@ -25,6 +25,10 @@ CREATE TABLE `assoc` (
   `assocId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+/*Data for the table `assoc` */
+
+insert  into `assoc`(`wordId`,`assocId`) values (1,1),(1,2),(1,3),(1,4),(1,5),(6,6),(6,7);
+
 /*Table structure for table `tattoo` */
 
 DROP TABLE IF EXISTS `tattoo`;
@@ -37,6 +41,10 @@ CREATE TABLE `tattoo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+/*Data for the table `tattoo` */
+
+insert  into `tattoo`(`id`,`name`,`path`,`desc`) values (1,'test1','img/01.jpg',NULL),(2,'test2','img/02.jpg',NULL),(3,'test3','img/03.jpg',NULL),(4,'test4','img/04.jpg',NULL);
+
 /*Table structure for table `tattoo_assoc` */
 
 DROP TABLE IF EXISTS `tattoo_assoc`;
@@ -45,6 +53,10 @@ CREATE TABLE `tattoo_assoc` (
   `tattooId` int(11) DEFAULT NULL,
   `assocId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `tattoo_assoc` */
+
+insert  into `tattoo_assoc`(`tattooId`,`assocId`) values (1,1),(1,2),(1,3),(1,4),(1,5),(2,6),(2,7),(3,2),(3,3),(3,4),(4,1),(4,2),(4,4);
 
 /*Table structure for table `word` */
 
@@ -55,6 +67,10 @@ CREATE TABLE `word` (
   `word` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `word` */
+
+insert  into `word`(`id`,`word`) values (0,NULL),(1,'skull'),(2,'dead'),(3,'brain'),(4,'death'),(5,'bone'),(6,'wolf'),(7,'moon');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74402c4c-ec69-4468-b5d5-de5e9a99bc58" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/schema.sql" afterPath="$PROJECT_DIR$/schema.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
     </list>
     <ignored path="tattoosearch.iws" />
@@ -28,22 +33,23 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+            <state vertical-scroll-proportion="-15.0">
+              <caret line="27" column="76" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="76" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86523217">
-              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state vertical-scroll-proportion="-26.115385">
+              <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
               <folding>
-                <marker date="1452457326751" expanded="true" signature="685:776" placeholder="SELECT ws.as..word..." />
-                <marker date="1452457326751" expanded="true" signature="1126:1245" placeholder="SELECT ta.ta..." />
-                <marker date="1452457326751" expanded="true" signature="1638:1670" placeholder="SELECT * FRO..tattoo..." />
+                <marker date="1452690217626" expanded="true" signature="688:773" placeholder="SELECT ws.as..word..." />
+                <marker date="1452690217626" expanded="true" signature="853:944" placeholder="SELECT ws.as..word..." />
+                <marker date="1452690217626" expanded="true" signature="1294:1413" placeholder="SELECT ta.ta..." />
+                <marker date="1452690217626" expanded="true" signature="1806:1838" placeholder="SELECT * FRO..tattoo..." />
               </folding>
             </state>
           </provider>
@@ -87,11 +93,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.59845984">
+              <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -101,7 +117,7 @@
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
+              <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -128,9 +144,10 @@
         <option value="$PROJECT_DIR$/query.php" />
         <option value="$PROJECT_DIR$/css/cover.css" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/search.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/js/script.js" />
       </list>
     </option>
   </component>
@@ -173,8 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -193,26 +208,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tattoosearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tattoosearch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../angular2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -278,7 +281,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1934" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1934" height="1047" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25026068" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -316,17 +319,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/query.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <marker date="1451001365887" expanded="true" signature="289:312" placeholder="SELECT * FRO..test2..." />
-            <marker date="1451001365887" expanded="true" signature="289:347" placeholder="SELECT * FRO..word_asos..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -356,9 +348,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1452457326751" expanded="true" signature="685:776" placeholder="SELECT ws.as..word..." />
-            <marker date="1452457326751" expanded="true" signature="1126:1245" placeholder="SELECT ta.ta..." />
-            <marker date="1452457326751" expanded="true" signature="1638:1670" placeholder="SELECT * FRO..tattoo..." />
+            <marker date="1452690217626" expanded="true" signature="688:773" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="853:944" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="1294:1413" placeholder="SELECT ta.ta..." />
+            <marker date="1452690217626" expanded="true" signature="1806:1838" placeholder="SELECT * FRO..tattoo..." />
           </folding>
         </state>
       </provider>
@@ -424,9 +417,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="30" />
           <folding>
-            <marker date="1452457326751" expanded="true" signature="685:776" placeholder="SELECT ws.as..word..." />
-            <marker date="1452457326751" expanded="true" signature="1126:1245" placeholder="SELECT ta.ta..." />
-            <marker date="1452457326751" expanded="true" signature="1638:1670" placeholder="SELECT * FRO..tattoo..." />
+            <marker date="1452690217626" expanded="true" signature="688:773" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="853:944" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="1294:1413" placeholder="SELECT ta.ta..." />
+            <marker date="1452690217626" expanded="true" signature="1806:1838" placeholder="SELECT * FRO..tattoo..." />
           </folding>
         </state>
       </provider>
@@ -492,9 +486,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="30" />
           <folding>
-            <marker date="1452457326751" expanded="true" signature="685:776" placeholder="SELECT ws.as..word..." />
-            <marker date="1452457326751" expanded="true" signature="1126:1245" placeholder="SELECT ta.ta..." />
-            <marker date="1452457326751" expanded="true" signature="1638:1670" placeholder="SELECT * FRO..tattoo..." />
+            <marker date="1452690217626" expanded="true" signature="688:773" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="853:944" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="1294:1413" placeholder="SELECT ta.ta..." />
+            <marker date="1452690217626" expanded="true" signature="1806:1838" placeholder="SELECT * FRO..tattoo..." />
           </folding>
         </state>
       </provider>
@@ -560,9 +555,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="30" />
           <folding>
-            <marker date="1452457326751" expanded="true" signature="685:776" placeholder="SELECT ws.as..word..." />
-            <marker date="1452457326751" expanded="true" signature="1126:1245" placeholder="SELECT ta.ta..." />
-            <marker date="1452457326751" expanded="true" signature="1638:1670" placeholder="SELECT * FRO..tattoo..." />
+            <marker date="1452690217626" expanded="true" signature="688:773" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="853:944" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="1294:1413" placeholder="SELECT ta.ta..." />
+            <marker date="1452690217626" expanded="true" signature="1806:1838" placeholder="SELECT * FRO..tattoo..." />
           </folding>
         </state>
       </provider>
@@ -628,9 +624,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
           <folding>
-            <marker date="1452457326751" expanded="true" signature="685:776" placeholder="SELECT ws.as..word..." />
-            <marker date="1452457326751" expanded="true" signature="1126:1245" placeholder="SELECT ta.ta..." />
-            <marker date="1452457326751" expanded="true" signature="1638:1670" placeholder="SELECT * FRO..tattoo..." />
+            <marker date="1452690217626" expanded="true" signature="688:773" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="853:944" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="1294:1413" placeholder="SELECT ta.ta..." />
+            <marker date="1452690217626" expanded="true" signature="1806:1838" placeholder="SELECT * FRO..tattoo..." />
           </folding>
         </state>
       </provider>
@@ -664,9 +661,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
           <folding>
-            <marker date="1452457326751" expanded="true" signature="685:776" placeholder="SELECT ws.as..word..." />
-            <marker date="1452457326751" expanded="true" signature="1126:1245" placeholder="SELECT ta.ta..." />
-            <marker date="1452457326751" expanded="true" signature="1638:1670" placeholder="SELECT * FRO..tattoo..." />
+            <marker date="1452690217626" expanded="true" signature="688:773" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="853:944" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="1294:1413" placeholder="SELECT ta.ta..." />
+            <marker date="1452690217626" expanded="true" signature="1806:1838" placeholder="SELECT * FRO..tattoo..." />
           </folding>
         </state>
       </provider>
@@ -700,9 +698,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
           <folding>
-            <marker date="1452457326751" expanded="true" signature="685:776" placeholder="SELECT ws.as..word..." />
-            <marker date="1452457326751" expanded="true" signature="1126:1245" placeholder="SELECT ta.ta..." />
-            <marker date="1452457326751" expanded="true" signature="1638:1670" placeholder="SELECT * FRO..tattoo..." />
+            <marker date="1452690217626" expanded="true" signature="688:773" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="853:944" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="1294:1413" placeholder="SELECT ta.ta..." />
+            <marker date="1452690217626" expanded="true" signature="1806:1838" placeholder="SELECT * FRO..tattoo..." />
           </folding>
         </state>
       </provider>
@@ -744,14 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/cover.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -770,31 +761,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86523217">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state vertical-scroll-proportion="-26.115385">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding>
-            <marker date="1452457326751" expanded="true" signature="685:776" placeholder="SELECT ws.as..word..." />
-            <marker date="1452457326751" expanded="true" signature="1126:1245" placeholder="SELECT ta.ta..." />
-            <marker date="1452457326751" expanded="true" signature="1638:1670" placeholder="SELECT * FRO..tattoo..." />
+            <marker date="1452690217626" expanded="true" signature="688:773" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="853:944" placeholder="SELECT ws.as..word..." />
+            <marker date="1452690217626" expanded="true" signature="1294:1413" placeholder="SELECT ta.ta..." />
+            <marker date="1452690217626" expanded="true" signature="1806:1838" placeholder="SELECT * FRO..tattoo..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.0">
+          <caret line="27" column="76" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59845984">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

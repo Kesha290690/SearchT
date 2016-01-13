@@ -36,6 +36,9 @@ class Write extends Connect
 
         $data = array();
 
+//        $stmt = $dbn->prepare("SELECT ws.assocId FROM word wo JOIN assoc ws ON (wo.id = ws.wordId) WHERE word LIKE ?");
+//        $stmt->execute([$_POST['word']]);
+
         $stmt = $dbn->prepare("SELECT ws.assocId FROM word wo JOIN assoc ws ON (wo.id = ws.wordId) WHERE word LIKE 'skull'");
         $stmt->execute();
 
@@ -86,18 +89,35 @@ class Write extends Connect
             );
         }
 
-        var_dump($tattoo);
-
         return $tattoo;
     }
 }
 
-if (isset($_POST['word'])) {
-    $data = Write::getTattoo();
-    echo json_encode($data);
+//if (isset($_POST['word'])) {
+//    $data = Write::getTattoo();
+//    echo json_encode($data);
+//}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['word'])) {
+        $data = Write::getTattoo();
+        echo json_encode("yesyesyes");
+    } else {
+        echo json_encode("nonononon");
+    }
+
 }
 
-Write::getTattoo();
+//if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+//    $data = Write::getTattoo();
+//    echo json_encode($data);
+//}
+
+
+
+$data = Write::getTattoo();
+    echo json_encode($data);
+
 
 
 

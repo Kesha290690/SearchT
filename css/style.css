@@ -55,3 +55,12 @@ body {
         float: left;
     }
 }
+
+.search-button {
+    display: block;
+    margin: auto;
+}
+
+.image-block {
+    margin-top: 50px;
+}

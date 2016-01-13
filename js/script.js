@@ -1,51 +1,51 @@
 $(function() {
 
     var tattooModel = Backbone.Model.extend({
-        urlRoot: "../search.php",
+        urlRoot: "search.php"
     });
 
     var tattooCollect = Backbone.Collection.extend({
         model: tattooModel,
-        url: "search.php/Write/getAll",
+        url: "test.php"
     });
 
     var myTattooCollect = new tattooCollect();
 
-    var startRouter = Backbone.Router.extend({
-        routes: {
-            "title/:title" : "title"
-        },
-
-        title: function(title) {
-            var views = new tattooView({model:myTattooCollect});
-        }
-    });
-
     var tattooView = Backbone.View.extend({
 
-        el        : $("#main-block"),
+        el        : $(".container"),
+
+        model: myTattooCollect,
+
+        $imageBlock       : $('#main-block'),
 
         template  : _.template($("#tattoo-template").html()),
 
         events: {
-
+            "click .search-button"   : "searchT",
         },
 
         initialize: function() {
-            this.model.fetch();
+            this.input = this.$("#searchTattoo");
             this.model.bind('add', this.render, this);
         },
 
         render: function () {
-            console.log(this.model.toJSON());
-            $(this.el).html(this.template(this.model.toJSON()));
+            console.log(this.model.toJSON()[0]);
+            $(this.$imageBlock).html(this.template(this.model.toJSON()[0]));
             return this;
+        },
+
+        searchT : function() {
+            //if (!this.input.val()) return;
+            this.model.fetch();
         }
+
     });
 
-    var view = new tattooView({model:myTattooCollect});
+    var view = new tattooView();
 
-    Backbone.history.start();
+
 
 });
 
@@ -57,7 +57,15 @@ var myTest = {
             type    : 'post',
             dataType: 'json',
             success: function(json){
-                console.log(json)
+                $('#main-block').html('');
+                template = _.template($('#tattoo-template').html());
+                $('#main-block').append(template(
+                    {
+                        name : json.name,
+                        path : json.path
+                    }
+                ));
+                console.log(json);
             }
         })
     }
